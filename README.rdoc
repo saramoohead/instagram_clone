@@ -1,17 +1,19 @@
 = Instagram clone with Rails and RSpec
 
-Rails
-HAML
+== Frameworks
+* Rails
+* HAML
 
-OAuth
-dotenv
+== Special gems
+* OAuth
+* dotenv
 
-Capybara
-RSpec
-Rubocop
+== Testing
+* Capybara
+* RSpec
+* Rubocop
 
 == Models
-
 * User
 * Post
 * Comment
