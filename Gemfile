@@ -46,6 +46,7 @@ end
 
 group :test do
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'
   gem 'capybara'
