@@ -1,0 +1,18 @@
+# Instagram clone with Rails and RSpec
+
+* Rails
+* HAML
+
+* OAuth
+* dotenv
+
+* Capybara
+* RSpec
+* Rubocop
+
+## Models
+
+* User
+* Post
+* Comment
+* Like
