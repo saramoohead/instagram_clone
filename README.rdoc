@@ -1,14 +1,14 @@
 = Instagram clone with Rails and RSpec
 
-- Rails
-- HAML
+Rails
+HAML
 
-- OAuth
-- dotenv
+OAuth
+dotenv
 
-- Capybara
-- RSpec
-- Rubocop
+Capybara
+RSpec
+Rubocop
 
 == Models
 
