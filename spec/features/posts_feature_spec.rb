@@ -9,17 +9,23 @@ feature 'posts' do
     end
   end
 
-  context 'displays posts' do
-    # post = Post.new
-    scenario 'when user creates one' do
+  context 'when posts have been added' do
+    scenario 'they display their description' do
       visit '/posts'
       click_link 'Add a post'
-      visit '/posts/new'
-      attach_file('post[image]', 'public/999TadpolesFindNewHome.jpg')
+      fill_in 'post_description', with: 'My first post'
       click_button 'Create Post'
-      # expect(post).to have_attached_file 'public/999TadpolesFindNewHome.jpg'
+      expect(page).to have_content 'My first post'
+      expect(current_path).to eq '/posts'
+    end
+
+    scenario 'and their image' do
+      visit '/posts'
+      click_link 'Add a post'
+      attach_file 'post[image]', 'public/999TadpolesFindNewHome.jpg'
+      click_button 'Create Post'
       expect(page).to have_css "img[src*='999TadpolesFindNewHome.jpg']"
-      # I wanted to use Paperclip Shoulda matchers, but couldn't make it work
+      # I tried to use Paperclip Shoulda matchers, but couldn't make it work
     end
   end
 end

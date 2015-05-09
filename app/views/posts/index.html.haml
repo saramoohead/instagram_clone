@@ -1,5 +1,8 @@
-%p No posts yet!
 %a(href='/posts/new') Add a post
 
-- @posts.each do |post|
-  %h2= post.image
+- if @posts.any?
+  - @posts.each do |post|
+    %h3= image_tag post.image.url(:medium)
+    %h3= post.description
+- else
+  %p No posts yet

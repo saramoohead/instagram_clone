@@ -1,5 +1,6 @@
-Post your image here.
+%p Post your image here.
 
 = form_for @post, html: { multipart: true } do |f|
   = f.file_field :image
+  = f.text_field :description
   = f.submit
