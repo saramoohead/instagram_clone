@@ -8,4 +8,13 @@ feature 'posts' do
       expect(page).to have_link 'Add a post'
     end
   end
+
+  context 'displays posts' do
+    scenario 'when user creates one' do
+      visit '/posts'
+      attach_file('image', 'public/999TadpolesFindNewHome.jpg')
+      click_button('Upload')
+      expect(attach_file('image', 'public/999TadpolesFindNewHome.jpg')).to be_truthy
+    end
+  end
 end

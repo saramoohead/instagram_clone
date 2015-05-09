@@ -4,9 +4,10 @@
 * Rails
 * HAML
 
-== Special gems
+== Gems
 * OAuth
 * dotenv
+* Paperclip
 
 == Testing
 * Capybara
