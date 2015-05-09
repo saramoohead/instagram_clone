@@ -10,11 +10,16 @@ feature 'posts' do
   end
 
   context 'displays posts' do
+    # post = Post.new
     scenario 'when user creates one' do
       visit '/posts'
-      attach_file('image', 'public/999TadpolesFindNewHome.jpg')
-      click_button('Upload')
-      expect(attach_file('image', 'public/999TadpolesFindNewHome.jpg')).to be_truthy
+      click_link 'Add a post'
+      visit '/posts/new'
+      attach_file('post[image]', 'public/999TadpolesFindNewHome.jpg')
+      click_button 'Create Post'
+      # expect(post).to have_attached_file 'public/999TadpolesFindNewHome.jpg'
+      expect(page).to have_css "img[src*='999TadpolesFindNewHome.jpg']"
+      # I wanted to use Paperclip Shoulda matchers, but couldn't make it work
     end
   end
 end
