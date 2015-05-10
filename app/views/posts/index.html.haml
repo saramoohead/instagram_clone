@@ -1,4 +1,3 @@
-/ %a(href='/posts/new') Add a post
 = link_to "Add a post", new_post_path
 
 - if @posts.any?
@@ -9,8 +8,7 @@
     - if post.comments.any?
       %ul
         - post.comments.each do |comment|
-          %li
-          = comment.content
+          %li= comment.content
     
     = link_to "Comment", new_post_comment_path(post)
 - else

@@ -5,6 +5,7 @@
 * HAML
 
 == Gems
+* Devise
 * OAuth
 * dotenv
 * Paperclip
@@ -20,3 +21,9 @@
 * Post
 * Comment
 * Like
+
+== To Do
+* Edit posts
+* Delete posts (and dependent comments)
+* Edit comments
+* Delete comments
