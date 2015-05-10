@@ -5,4 +5,8 @@ describe Post, type: :model do
     post = described_class.new(description: 'My first post')
     expect(post.description).to eq 'My first post'
   end
+
+  it 'can have many comments' do
+    expect(subject).to have_many :comments
+  end
 end

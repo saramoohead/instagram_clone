@@ -1,8 +1,17 @@
-%a(href='/posts/new') Add a post
+/ %a(href='/posts/new') Add a post
+= link_to "Add a post", new_post_path
 
 - if @posts.any?
   - @posts.each do |post|
     %h3= image_tag post.image.url(:medium)
     %h3= post.description
+
+    - if post.comments.any?
+      %ul
+        - post.comments.each do |comment|
+          %li
+          = comment.content
+    
+    = link_to "Comment", new_post_comment_path(post)
 - else
   %p No posts yet

@@ -6,7 +6,7 @@ feature 'comments' do
   scenario 'posts can have many comments' do
     visit '/posts'
     click_link 'Comment'
-    fill_in "Comment", with: 'Looks fun!'
+    fill_in "Content", with: 'Looks fun!'
     click_button 'Leave Comment'
     expect(current_path).to eq '/posts'
     expect(page).to have_content 'Looks fun!'
