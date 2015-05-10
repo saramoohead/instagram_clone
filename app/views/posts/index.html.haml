@@ -17,5 +17,6 @@
           %li= comment.content
     
     = link_to "Comment", new_post_comment_path(post)
+    = link_to "Like", new_post_like_path(post)
 - else
   %p No posts yet
